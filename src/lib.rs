@@ -33,9 +33,9 @@
 #![no_std]
 
 use pane_extension::alloc::{format, string::String};
-use pane_extension::feedback::{self, Confirmation, ToastStyle};
+use pane_extension::feedback::{self, Confirmation, HudStyle};
 use pane_extension::system_commands::{self, Outcome};
-use pane_extension::{Command, LaunchRecord, NoCustomView};
+use pane_extension::{Command, LaunchRecord, NoDesignedView};
 
 struct SystemCommands;
 pane_extension::export!(SystemCommands);
@@ -80,13 +80,13 @@ const DESTRUCTIVE: [&str; 4] = [LOG_OUT, RESTART, SHUT_DOWN, EMPTY_BIN];
 /// changed (3 seconds for the failure style).
 fn answer(outcome: Outcome) {
     match outcome {
-        Outcome::Done(text) => feedback::show_hud(&text, ToastStyle::Success),
-        Outcome::Explained(text) => feedback::show_hud(&text, ToastStyle::Failure),
+        Outcome::Done(text) => feedback::show_hud(&text, HudStyle::Success),
+        Outcome::Explained(text) => feedback::show_hud(&text, HudStyle::Failure),
     }
 }
 
 impl Command for SystemCommands {
-    type CustomView = NoCustomView;
+    type DesignedView = NoDesignedView;
 
     async fn run(command: String, launch: LaunchRecord) -> Result<(), String> {
         // The destructive ones ask first, offering "Don't ask again"; a
