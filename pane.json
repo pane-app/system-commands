@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "title": "System Commands",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "apiVersion": "0.2",
   "icon": "icon.svg",
   "platforms": ["windows"],
@@ -9,6 +9,7 @@
     {
       "id": "lock-screen",
       "title": "Lock Screen",
+      "icon": "icons/lock-screen.svg",
       "subtitle": "Locks the screen; your session stays on",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -16,6 +17,7 @@
     {
       "id": "log-out",
       "title": "Log Out",
+      "icon": "icons/log-out.svg",
       "subtitle": "Ends your session, asking first; applications are not forced closed",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -23,6 +25,7 @@
     {
       "id": "restart",
       "title": "Restart",
+      "icon": "icons/restart.svg",
       "subtitle": "Restarts Windows, asking first; applications are forced closed",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -30,6 +33,7 @@
     {
       "id": "shut-down",
       "title": "Shut Down",
+      "icon": "icons/shut-down.svg",
       "subtitle": "Powers Windows off, asking first; applications are forced closed",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -37,6 +41,7 @@
     {
       "id": "sleep",
       "title": "Sleep",
+      "icon": "icons/sleep.svg",
       "subtitle": "Sleeps the computer; a Modern Standby one sleeps by its displays turning off",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -44,6 +49,7 @@
     {
       "id": "hibernate",
       "title": "Hibernate",
+      "icon": "icons/hibernate.svg",
       "subtitle": "Hibernates the computer, or says that it cannot",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -51,6 +57,7 @@
     {
       "id": "turn-off-displays",
       "title": "Turn Off Displays",
+      "icon": "icons/turn-off-displays.svg",
       "subtitle": "Turns the displays off",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -58,6 +65,7 @@
     {
       "id": "start-screen-saver",
       "title": "Start Screen Saver",
+      "icon": "icons/start-screen-saver.svg",
       "subtitle": "Starts the screen saver, or says that none is set",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -65,6 +73,7 @@
     {
       "id": "volume-up",
       "title": "Volume Up",
+      "icon": "icons/volume-up.svg",
       "subtitle": "Raises the volume by the step Windows' volume keys take",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -72,6 +81,7 @@
     {
       "id": "volume-down",
       "title": "Volume Down",
+      "icon": "icons/volume-down.svg",
       "subtitle": "Lowers the volume by the same step",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -79,6 +89,7 @@
     {
       "id": "toggle-mute",
       "title": "Toggle Mute",
+      "icon": "icons/toggle-mute.svg",
       "subtitle": "Mutes the sound, or unmutes it, saying the volume it ended at",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -86,6 +97,7 @@
     {
       "id": "set-volume",
       "title": "Set Volume",
+      "icon": "icons/set-volume.svg",
       "subtitle": "Sets the volume to a level from 0 to 100",
       "component": "system_commands.wasm",
       "mode": "no-view",
@@ -101,6 +113,7 @@
     {
       "id": "toggle-microphone-mute",
       "title": "Toggle Microphone Mute",
+      "icon": "icons/toggle-microphone-mute.svg",
       "subtitle": "Mutes every microphone when any is on, unmutes them all otherwise",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -108,6 +121,7 @@
     {
       "id": "open-recycle-bin",
       "title": "Open Recycle Bin",
+      "icon": "icons/open-recycle-bin.svg",
       "subtitle": "Opens the Recycle Bin in File Explorer",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -115,6 +129,7 @@
     {
       "id": "empty-recycle-bin",
       "title": "Empty Recycle Bin",
+      "icon": "icons/empty-recycle-bin.svg",
       "subtitle": "Empties the Recycle Bin, asking first; an already empty one is a success",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -122,6 +137,7 @@
     {
       "id": "toggle-appearance",
       "title": "Toggle System Appearance",
+      "icon": "icons/toggle-appearance.svg",
       "subtitle": "Switches Windows between light and dark, saying which it chose",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -129,6 +145,7 @@
     {
       "id": "toggle-hdr",
       "title": "Toggle HDR",
+      "icon": "icons/toggle-hdr.svg",
       "subtitle": "Turns HDR on when any capable display is off, otherwise off",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -136,6 +153,7 @@
     {
       "id": "show-desktop",
       "title": "Show Desktop",
+      "icon": "icons/show-desktop.svg",
       "subtitle": "Hides the open windows, or brings them back, as the shell's own toggle",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -143,6 +161,7 @@
     {
       "id": "toggle-hidden-files",
       "title": "Toggle Hidden Files",
+      "icon": "icons/toggle-hidden-files.svg",
       "subtitle": "Shows hidden files in File Explorer, or hides them again",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -150,6 +169,7 @@
     {
       "id": "eject-removable-drives",
       "title": "Eject Removable Drives",
+      "icon": "icons/eject-removable-drives.svg",
       "subtitle": "Ejects every removable drive, reporting each drive that refused",
       "component": "system_commands.wasm",
       "mode": "no-view"
@@ -157,6 +177,7 @@
     {
       "id": "toggle-bluetooth",
       "title": "Toggle Bluetooth",
+      "icon": "icons/toggle-bluetooth.svg",
       "subtitle": "Turns Bluetooth on when any radio is off, otherwise off",
       "component": "system_commands.wasm",
       "mode": "no-view"
